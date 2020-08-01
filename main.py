@@ -13,23 +13,25 @@ class TikTok:
         try:
             self.amount = int(input('> Desired Amount of Shares: '))
         except ValueError:
-            print('\nInteger expected.')
-            os.system('title [TikTok Shares Botter] - Restart required')
-            os.system('pause >NUL')
-            os._exit(0)
+            self.close('Integer expected.')
 
         try:
-            self.video_id = input('> TikTok URL: ').split('/')[5]
+            self.video_id = input('> TikTok Video URL: ').split('/')[5]
         except IndexError:
-            print(
-                '\nInvalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@username/vi'
-                'deo/1234567891234567891'
+            self.close(
+                'Invalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@username/vide'
+                'o/1234567891234567891'
             )
-            os.system('title [TikTok Shares Botter] - Restart required')
-            os.system('pause >NUL')
-            os._exit(0)
         else:
             print()
+
+    def close(self, message):
+        print(f'\n{message}')
+        os.system('title [TikTok Shares Botter] - Restart required')
+        os.system('pause >NUL')
+        os.system('title [TikTok Shares Botter] - Exiting...')
+        sleep(3)
+        os._exit(0)
 
     def status(self, code, intention):
         if code == 200:
@@ -38,11 +40,13 @@ class TikTok:
             self.lock.acquire()
             print(f'Error: {intention} | Status Code: {code}')
             self.lock.release()
+            self.bot()
 
     def update_title(self):
         # Avoid ZeroDivisionError
         while self.added == 0:
             sleep(0.2)
+
         while self.added < self.amount:
             # Elapsed Time / Added * Remaining
             time_remaining = strftime(
@@ -64,7 +68,7 @@ class TikTok:
 
     def bot(self):
         action_time = round(time())
-        install_id = ''.join(random.choice('0123456789') for _ in range(19))
+        device_id = ''.join(random.choice('0123456789') for _ in range(19))
 
         data = (
             f'action_time={action_time}&item_id={self.video_id}&item_type=1&share_delta=1&stats_cha'
@@ -73,8 +77,8 @@ class TikTok:
         headers = {
             'Content-Type': 'application/x-www-form-urlencoded',
             'x-common-params-v2': 'version_code=16.6.5&app_name=musical_ly&channel=App%20Store&devi'
-                                  f'ce_id={install_id}&aid=1233&os_version=13.5.1&device_platform=i'
-                                  'phone&device_type=iPhone10,5'
+                                  f'ce_id={device_id}&aid=1233&os_version=13.5.1&device_platform=ip'
+                                  'hone&device_type=iPhone10,5'
         }
 
         try:
@@ -84,9 +88,12 @@ class TikTok:
             )
         except Exception as e:
             print(f'Error: {e}')
+            self.bot()
         else:
             if 'Service Unavailable' not in response.text:
                 self.status(response.status_code, response.text)
+            else:
+                self.bot()
 
     def multi_threading(self):
         self.start_time = time()
