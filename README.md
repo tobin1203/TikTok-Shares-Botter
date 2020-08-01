@@ -13,6 +13,7 @@ His Discord username: verdict#0200
 
 ## Usage
 **Python 3.6 or above is required.**<br/>
+**Please keep in mind that I develop for Windows machines only. I do not intentionally support other operating systems.**<br/>
 If you do not already have the **requests** library installed, run the setup.py file — make sure PIP is added to PATH.
 1. Run main.py.
 2. Enter the amount of desired Shares.
