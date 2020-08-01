@@ -17,7 +17,7 @@ His Discord username: verdict#0200
 - If you do not already have the **requests** library installed, run setup.py — make sure PIP is added to PATH.
 1. Run main.py.
 2. Enter the amount of desired Shares.
-3. Paste a TikTok video URL.
+3. Paste a TikTok video URL — e.g. https://www.tiktok.com/@username/video/1234567891234567891.
 4. All set!
 
 ## Legal Notice
