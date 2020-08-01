@@ -4,7 +4,7 @@ Adds TikTok Shares for you.
 ## Information
 This tool was strictly developed to demonstrate how straightforward it is to abuse a service like TikTok. Usage of this tool will definitely cause the targeted video to be on the TikTok "For You" page — increases chances to become TikTok famous. Please refrain from using this TikTok Shares Botter as it is once again developed for educational purposes only. Nevertheless, if you use this, you are doing it at your own risk. You have been warned.
 
-Thanks to verdict for this insane idea.<br/>
+Thanks to verdict for this intelligent idea.<br/>
 His Discord username: verdict#0200
 
 ## Preview
@@ -12,9 +12,9 @@ His Discord username: verdict#0200
 ![](https://i.imgur.com/WstiI7q.png)
 
 ## Usage
-**Python 3.6 or above is required.**<br/>
-**Please keep in mind that I develop for Windows machines only. I do not intentionally support other operating systems.**<br/>
-If you do not already have the **requests** library installed, run the setup.py file — make sure PIP is added to PATH.
+- Python 3.6 or above is required.
+- I develop for Windows machines only and do not intentionally support other operating systems.
+- If you do not already have the **requests** library installed, run setup.py — make sure PIP is added to PATH.
 1. Run main.py.
 2. Enter the amount of desired Shares.
 3. Paste a TikTok video URL.
