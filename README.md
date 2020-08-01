@@ -9,7 +9,7 @@ His Discord username: verdict#0200
 
 ## Preview
 ![](https://i.imgur.com/63NTRvx.png)
-![](https://i.imgur.com/TjBvTpZ.png)
+![](https://i.imgur.com/tGdzqXa.png)
 
 ## Usage
 - Python 3.6 or above is required.
