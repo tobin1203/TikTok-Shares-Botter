@@ -23,7 +23,13 @@ class TikTok:
                 'o/1234567891234567891'
             )
         else:
-            print()
+            if not self.video_id.isdigit():
+                self.close(
+                    'Invalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@username/'
+                    'video/1234567891234567891'
+                )
+            else:
+                print()
 
     def close(self, message):
         print(f'\n{message}')
