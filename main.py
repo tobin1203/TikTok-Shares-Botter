@@ -96,17 +96,20 @@ class TikTok:
             print(f'Error: {e}')
             self.bot()
         else:
-            if 'Service Unavailable' not in response.text:
+            if all(i not in response.text for i in ['Service Unavailable', 'Gateway Timeout']):
                 self.status(response.status_code, response.text)
             else:
                 self.bot()
 
-    def multi_threading(self):
+    def start(self):
         self.start_time = time()
         threading.Thread(target=self.update_title).start()
 
         for _ in range(self.amount):
-            threading.Thread(target=self.bot).start()
+            while True:
+                if threading.active_count() <= 300:
+                    threading.Thread(target=self.bot).start()
+                    break
 
         os.system('pause >NUL')
         os.system('title [TikTok Shares Botter] - Exiting...')
@@ -116,4 +119,4 @@ class TikTok:
 if __name__ == '__main__':
     os.system('cls && title [TikTok Shares Botter]')
     main = TikTok()
-    main.multi_threading()
+    main.start()
