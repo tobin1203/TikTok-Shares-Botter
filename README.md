@@ -9,6 +9,7 @@ His Discord username: verdict#0200
 
 ## Preview
 ![](https://i.imgur.com/63NTRvx.png)<br/>
+![](https://i.imgur.com/uOERpd0.png)<br/>
 ![](https://i.imgur.com/5lN0Nzs.png)<br/>
 ![](https://i.imgur.com/NyhiJe1.png)<br/>
 ![](https://i.imgur.com/tGdzqXa.png)
