@@ -84,7 +84,8 @@ class TikTok:
             'Content-Type': 'application/x-www-form-urlencoded',
             'x-common-params-v2': 'version_code=16.6.5&app_name=musical_ly&channel=App%20Store&devi'
                                   f'ce_id={device_id}&aid=1233&os_version=13.5.1&device_platform=ip'
-                                  'hone&device_type=iPhone10,5'
+                                  'hone&device_type=iPhone10,5',
+            'User-Agent': 'TikTok 16.6.5 rv:166515 (iPhone; iOS 13.6; sv_SE) Cronet'
         }
 
         try:
