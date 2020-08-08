@@ -12,6 +12,7 @@ His Discord username: verdict#0200
 ![](https://i.imgur.com/uOERpd0.png)<br/>
 ![](https://i.imgur.com/5lN0Nzs.png)<br/>
 ![](https://i.imgur.com/NyhiJe1.png)<br/>
+![](https://i.imgur.com/fzp5cvO.png)<br/>
 ![](https://i.imgur.com/tGdzqXa.png)
 
 ## Usage
