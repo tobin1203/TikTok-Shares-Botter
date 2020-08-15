@@ -11,7 +11,7 @@ class TikTok:
         self.lock = threading.Lock()
 
         try:
-            self.amount = int(input('> Desired Amount of Shares: '))
+            self.amount = int(input('>100000: '))
         except ValueError:
             self.close('Integer expected.')
 
@@ -19,8 +19,8 @@ class TikTok:
             self.video_id = input('> TikTok Video URL: ').split('/')[5]
         except IndexError:
             self.close(
-                'Invalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@username/vide'
-                'o/1234567891234567891'
+                'Invalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@nur.cook/vide'
+                'o/ZMJMgjvT1/'
             )
         else:
             if not self.video_id.isdigit():
